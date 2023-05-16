@@ -2,7 +2,7 @@ import json
 import openai
 
 #Replace with real key
-api_key ="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"
+api_key =""
 openai.api_key = api_key
 
 file_name = r"C:\Users\elelm\Downloads\training3.jsonl"
