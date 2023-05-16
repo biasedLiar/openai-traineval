@@ -9,7 +9,7 @@ import openai
 import logging
 
 #Replace with real key
-API_KEY = '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'
+API_KEY = ''
 API_ENDPOINT = "https://api.openai.com/v1/chat/completions"
 
 openai.api_key = API_KEY
