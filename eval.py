@@ -109,8 +109,8 @@ while i < len(texts) and failures < max_failures:
                         {"role": "assistant", "content": "Påminnelse om møte i konferanserommet kl. 10 imorgen."},
                         {"role": "user", "content": "create a short summary of the following email body:\n\"" + texts[i] + "\" from the perspective of the sender in norwegian.  Only include the important information"}]
                 
-                response = openai.ChatCompletion.create(model=model_name, messages=message_list, temperature=0.3, max_tokens=500, stop="###")
-                summary = response["choices"][0]["message"]["content"]
+            response = openai.ChatCompletion.create(model=model_name, messages=message_list, temperature=0.3, max_tokens=500, stop="###")
+            summary = response["choices"][0]["message"]["content"]
         else:
             if mode == TEXT_COMPLETION:
                 if context == ZERO_SHOT:
