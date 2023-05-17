@@ -125,7 +125,7 @@ while i < len(texts) and failures < max_failures:
                     sum_prompt = subjects[i] + " $$$ " + texts[i] + "->->"
                 else: 
                     sum_prompt = texts[i] + "->->"
-            response = openai.Completion.create(model="davinci:ft-edialog24-as-2023-05-07-19-34-37", prompt=sum_prompt, temperature=0.3, max_tokens=500, stop="###")
+            response = openai.Completion.create(model=model_name, prompt=sum_prompt, temperature=0.3, max_tokens=500, stop="###")
             summary = response["choices"][0]["text"]
             if include_subjects:
                 summary = summary.replace("$$$", "")
