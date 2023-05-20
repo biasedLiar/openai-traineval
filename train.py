@@ -5,7 +5,7 @@ import openai
 api_key =""
 openai.api_key = api_key
 
-file_name = r"C:\Users\elelm\Downloads\training3.jsonl"
+file_name = "" #path to .jsonl file
 
 prepare_training=True
 
@@ -27,5 +27,6 @@ else:
     #file_id = "file-vj5Wq7YSdnfQCf5LUWoyZ5wA" #Without subjects
 
 #Choose model to train
-fine_tune_response = openai.FineTune.create(training_file=file_id, model="ada")
+model_name = "ada"
+fine_tune_response = openai.FineTune.create(training_file=file_id, model=model_name)
 print(fine_tune_response)
